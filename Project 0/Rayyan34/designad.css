@@ -1,0 +1,42 @@
+body {
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+}
+
+.topbar {
+    color: red;
+    font-size: 20px;
+    margin: 15px 30px;
+}
+
+.hyperlinks {
+    text-align: right;
+}
+
+.line {
+    border-bottom: 2px solid #eef2ed;
+}
+
+.formmain {
+    margin: 40px 50px;
+}
+
+input[type=text] {
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    background-color: #0099ff;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #0099ff;
+    border-radius: 2px;
+    padding: 4px 8px;
+}
+
+.container {
+    text-align: center;
+}
