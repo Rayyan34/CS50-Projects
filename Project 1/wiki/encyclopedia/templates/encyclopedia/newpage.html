@@ -1,0 +1,36 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+
+{% block title %}
+    Create a New Page
+{% endblock %}
+
+{% block body%}
+    {% if edit %}
+        <h1> Edit {{ entryName }} Page </h1>
+    {% else %}
+        <h1> Create a New Page </h1>
+    {% endif %}
+
+        <div class="container">
+            {% if message %}
+                <div class="alert alert-danger" role="alert">
+                     {{ message }}.
+                     Find it <a href="wiki/{{ entryTitle }}"> here. </a>
+                </div>
+            {% endif %}
+        </div>
+
+        <form action="{% url 'newpage' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+
+            {% if exists %}
+
+            {% else %}
+                <input class="btn btn-primary" type="submit" value="Submit" style="margin-top:10px;">
+            {% endif %}
+        </form>
+{% endblock %}

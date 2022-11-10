@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+   {{ entryTitle }} Not Found
+{% endblock %}
+
+{% block body%}
+    <div class="alert alert-secondary" role="alert">
+        <h4> The page you were searching for was not found </h2>
+    </div>
+
+    <h5> If you think the page belongs here click on this <a href="{% url 'newpage' %}"> link </a> to create a new page and help improve this wiki </h3>
+{% endblock %} 
